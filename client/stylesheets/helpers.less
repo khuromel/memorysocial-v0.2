@@ -1,0 +1,180 @@
+@import 'variables';
+@import 'lib/elements';
+
+/* -------------------
+    Helper styles
+   ------------------- */
+
+a {
+  cursor:pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.padding-wrapper {
+    padding: 20px;
+}
+
+.aligned {
+    &.center {
+        text-align: center;
+    }
+
+    &.left {
+        text-align: left;
+    }
+
+    &.right {
+        text-align: right;
+    }
+}
+
+.link {
+    &.unstyled {
+        color: inherit;
+    }
+
+    &.no-underline {
+        text-decoration: none;
+    }
+
+    &.no-hover-styles:hover {
+        color: inherit;
+    }
+}
+
+.titular {
+  font-family: @titleFont;
+  font-size:@fontLG;
+  line-height:@lineHeightLG;
+}
+
+.section-titular {
+  font-size:@fontXL;
+  line-height:@lineHeightXL;
+  margin-bottom:20px;
+}
+
+.caption {
+	font-size:@fontMD;
+}
+
+.section-head {
+	font-size:@fontXS;
+	color:#6D6D6D;
+}
+.footnote {
+	font-size:@fontXS;
+}
+.base {
+	z-index:1;
+	background-color:rgba(234,234,234,1);
+	width:100%;	
+}
+
+.page-header {
+  text-transform:uppercase;
+  border-bottom:0;
+  font-size:@fontHeader;
+  font-weight:normal;
+}
+
+.margin-top15 {
+  margin-top:15px;
+}
+
+.margin-bottom15 {
+  margin-bottom:15px;
+}
+
+.fa-button-margin {
+  margin-right:10px;
+}
+
+.hidden-input {
+  height:0px;
+  visibility:hidden;
+}
+
+.pull-center {
+  margin:0 auto;
+}
+
+.col-full-height {
+  height:100%;
+}
+
+label.block {
+  display:block;
+}
+
+.app-panel {
+  background:rgba(247,247,247,1);
+  padding:10px;
+
+  .header {
+    border-bottom:1px dotted black;
+    padding:10px 0;
+    margin:0 0 20px 0;
+  }
+}
+
+.underline {
+  transition:all .5s ease-in-out;
+  text-decoration:underline;
+
+  &:hover {
+    text-decoration:none;
+  }
+}
+
+.image-placeholder {
+  border:1px dotted #c0c0c0;
+  position:relative;
+  width:100%;
+  text-align:center;
+  cursor:pointer;
+  &:hover {
+    .fa {
+      color:#555555;
+    }
+  }
+  .fa {
+    transition:all .5s ease-in-out;
+    color:#c0c0c0;
+    margin:55px 0;
+  }
+  .image {
+    width:100%;
+    margin:0;
+  }
+}
+
+.snippets {
+  font-family:@fontSM;
+}
+
+ 
+/* -------------------
+Clearfix
+   ------------------- */ 
+.clearfix {
+   display: inline-block;
+}
+.clearfix:after {
+   content: ".";
+   display: block;
+   clear: both;
+   visibility: hidden;
+   line-height: 0;
+   height: 0;
+}
+html[xmlns] .clearfix {
+   display: block;
+}
+* html .clearfix {
+   height: 1%;
+   overflow: visible;
+}

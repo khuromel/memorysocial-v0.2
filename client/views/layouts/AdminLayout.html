@@ -1,0 +1,12 @@
+<template name="AdminLayout">
+  <div id="main" class="admin">
+    <header>
+      {{> adminheader }}
+    </header>
+    {{#unless currentUser}}
+    {{> loginPage}}
+    {{else}}
+    {{> yield}}
+    {{/unless}}
+  </div>
+</template>

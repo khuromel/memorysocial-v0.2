@@ -1,0 +1,42 @@
+<template name="admin">
+  <div class="container-nresponsive">
+    <section>
+      <h2 class="page-header">Dashboard</h2>
+      <hr>
+
+      <div class="row">
+        <div class="col-xs-8">
+          <p>Overall Count</p>
+          <ul class="list-group">
+            <li class="list-group-item">
+              <span class="badge">{{user_count}}</span>
+              <a href="/admin/Users">Users</a>
+            </li>
+            <li class="list-group-item">
+              <span class="badge">{{memory_count}}</span>
+              <a href="/admin/Memories">Memories</a>
+            </li>
+            <li class="list-group-item">
+              <span class="badge">{{connection_count}}</span>
+              <a href="/admin/Connections">Connections</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <div class="jumbotron">
+      <center>
+      <div class="row">
+        <div class="col-md-6">
+          <p class="lead">Want to Add New User?</p>
+          <p><a class="btn btn-lg btn-success" href="/admin/add-user" role="button">Click Here</a></p>
+        </div>
+        <div class="col-md-6">
+          <p class="lead">Want to Add New Memory?</p>
+          <p><a class="btn btn-lg btn-success" href="/admin/add-memory" role="button">Click Here</a></p>
+        </div>
+      </div>
+      </center>
+    </div>
+  </div>
+</template>

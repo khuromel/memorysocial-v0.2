@@ -1,0 +1,105 @@
+@import 'variables';
+@import 'lib/elements';
+
+@base: 160px;
+
+#main .login-wrapper {
+    max-width: @loginFormWidth;
+    margin: 2em auto 0 auto;
+    color: @secondaryFontColor;
+
+    .at-title .ui.header, label {
+        color: @secondaryFontColor;
+    }
+
+    .at-form {
+        padding: 1em;
+        background-color: rgba(0, 0,0, 0.5);
+        border-radius: 0.4em;
+        .ui.form .at-input.field > label { color: @secondaryFontColor; }
+    }
+
+    .actions-wrapper {
+        max-width: @loginFormWidth / 2;
+        margin: 0 auto;
+    }
+
+    .at-signup-link {
+        margin-top: 0.4em;
+    }
+
+    .hello {
+        margin-bottom: 1.8em;
+    }
+}
+
+.header-wrapper {
+	background:@primaryBaseColor;
+	height:@base;
+	color:@baseColor;
+
+    a:hover {
+      color: @secondaryLinkHoverColor;
+    }
+    &.active {
+      height: 900px;
+    }
+	h1 {
+		img {
+			display:block;
+			width:150px;
+			height:100px;
+			margin:0 auto;
+            position:relative;
+            top:10px;
+		}
+	}
+	nav {
+		ul li {
+			float:left;
+			list-style-type:none;
+			margin:0 10px;
+            a {
+                text-transform:uppercase;
+                letter-spacing:.5px;
+              &:focus {
+                color:inherit;
+                text-decoration:none
+              }
+            }
+            &:last-child:not(:only-child) {
+                margin:0;
+            }
+
+		}
+	}
+
+	.header-tools {
+		position:absolute;
+		top:20px;
+		right:20px;
+		text-transform:uppercase;
+        cursor:pointer;
+
+      .actions-wrapper {
+        .avatar.avatar-circle {
+          float:left;
+          margin-right:10px;
+        }
+        .hello {
+          float:right;
+        }
+      }
+	}
+}
+
+.header-wrapper.simple {
+  height:@base - 60px;
+  .header-tools, nav {
+    display:none;
+  }
+}
+
+.search-tools {
+    padding:20px 0;
+}

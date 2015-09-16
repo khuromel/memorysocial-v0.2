@@ -1,0 +1,15 @@
+<template name="DefaultLayout">
+  <div id="main">
+    <header>
+      {{> header}}
+    </header>
+    {{#unless currentUser}}
+    {{> loginPage}}
+    {{else}}
+    {{> yield}}
+    {{/unless}}
+    <footer>
+      {{> footer}}
+    </footer>
+  </div>
+</template>

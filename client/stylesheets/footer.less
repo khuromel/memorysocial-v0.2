@@ -1,0 +1,47 @@
+// General styles, e. g. for the body tag
+@import 'helpers';
+@import 'variables';
+@import 'lib/elements';
+
+/* -------------------
+    Footer
+   ------------------- */
+footer {
+    background: rgba(84,84,84,1);
+    color:#FFF;
+
+    .wrapper {
+        padding: @defaultSectionPadding;
+        dt {
+            text-transform:uppercase;
+            margin-bottom:10px;
+        }
+        ul.social-media li {
+            list-style-type:none;
+            float:left;
+            margin-right:5px;
+            i {
+                background-color:rgba(136,136,136,1);
+            }
+        }
+        &:last-child {
+            margin:0;
+        }
+        hr {
+            border-color: rgba(152, 152, 152, 1);
+        }
+    }
+
+    .wrapper.simple {
+        padding:10px 0;
+        .mega-footer {
+            display:none;
+        }
+    }
+
+    width:100%;
+  	height:100px;
+  	position:absolute;
+  	bottom:0 !important;
+  	left:0;
+}

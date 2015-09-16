@@ -1,0 +1,40 @@
+<template name="public_header">
+	<header class="header-wrapper {{ isSimple }}">
+		<div class="container-nresponsive">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="header-tools">
+						{{#if currentUser}}
+			            <div class="actions-wrapper">
+			                {{#if currentUser.username}}
+                                <div class="hello"><a href={{pathFor 'account'}}>Hi {{currentUser.username}}</a>!</div>
+			                {{/if}}
+			            </div>
+			            {{else}}
+			            <a href={{pathFor 'register'}}>Register</a> | <a href={{pathFor 'login'}}>Login</a>
+			            {{/if}}
+					</div>
+				</div>
+				<h1><img src="/images/logo.png"  class="logo"></h1>
+				<nav>
+					<ul>
+                        {{#each NavMenu}}
+                            <li><a href='{{routepath}}'><p>{{text}}</p></a></li>
+                        {{/each}}
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	{{#if currentUser}}
+	<div class="search-tools">
+		<div class="container-nresponsive">
+			<div class="row">
+				<div class="col-xs-12">
+				</div>
+			</div>
+		</div>
+	</div>
+	{{else}}
+	{{/if}}
+</template><!-- end template -->

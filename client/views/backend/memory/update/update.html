@@ -1,0 +1,23 @@
+<template name="update_memory">
+  <div class="container-nresponsive">
+    <section>
+      <h2 class="page-header">Edit memory</h2>
+      <div class="form-group">
+        <input type="file" class="file_bag form-control" placeholder="Browse File">
+        <button class="upload btn btn-default">Upload</button>
+      </div>
+
+      {{#each files}}
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="{{percent_uploaded}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percent_uploaded}}%;">
+            {{percent_uploaded}}%
+          </div>
+        </div>
+      {{/each}}
+
+      <!-- {{> dropzone url='#' id='dropzoneDiv'}} -->
+
+      {{> quickForm collection="Memories" doc=this id="update_memory" type="update"}}
+    </section>
+  </div>
+</template>

@@ -1,0 +1,35 @@
+<template name="memories">
+
+  <div class="container-nresponsive">
+    <section>
+      <h2 class="page-header">{{PageName}}</h2>
+      <a href="/admin/add-memory" >Add New</a>
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>UserID</th>
+              <th>Date Created</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each memory_list}}
+              <tr>
+                <td><a href="{{pathFor 'memory.show'}}">{{title}}</a></td>
+                  <td>{{publication}}</td>
+                <td>{{created_at}}</td>
+                <td>
+                    <a class="btn btn-default delete" role="button">
+                      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </a>
+                </td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</template>

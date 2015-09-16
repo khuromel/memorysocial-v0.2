@@ -1,0 +1,179 @@
+@import 'variables';
+@import 'lib/elements';
+
+#main {
+    .features.grid {
+        width: 100%;
+        margin: 0%;
+        margin-top: 30px;
+    }
+
+    .main-content > .ui.two.column.grid {
+        padding-top: 20px;
+    }
+
+    .column > .icon-wrapper {
+        font-size: 2em;
+        color: @primaryIconColor;
+    }
+    
+/* -------------------
+Sections
+   ------------------- */
+
+	.slider {
+		position:relative;
+	   aside {
+		   @asideBackgroundColor:rgba(240,185,74,1);
+		   background:@asideBackgroundColor;
+		   padding:10px;
+		   height:240px;
+		   position:absolute;
+		   top:40px;
+		   left:20px;
+		   form {
+			   input {
+				   border:0;
+				   border-bottom:2px solid rgba(255,255,255,1);
+				   background:transparent;
+				   border-radius:0;
+				   box-shadow:none;
+			   }
+			   .glyphicon {
+				   font-size:2em;
+			   }
+				input::-webkit-input-placeholder {
+					transition:color .5s ease-in-out;
+					color: white;
+				}
+				
+				input:-moz-placeholder { /* Firefox 18- */
+					color: white;  
+				}
+				
+				input::-moz-placeholder {  /* Firefox 19+ */
+					color: white;  
+				}
+				
+				input:-ms-input-placeholder {  
+					color: white;  
+				}
+				input:focus::-webkit-input-placeholder {
+					color:@asideBackgroundColor;
+				}
+		   }
+	   }
+	   .carousel-indicators {
+		   bottom:55px;
+	   }
+	   .wine-search {
+		   input {
+			   padding-left:0; padding-right:0; 
+		   }
+		   .tools {
+			   color:@searchColor;
+		   }
+	   }
+	}
+	
+	.feature-blocks {
+		position:relative;
+		margin-top:-50px;
+		height:150px;
+		padding:0;
+		
+		.content {
+			z-index:2;
+			padding:25px;
+			position:absolute;		
+				
+			#classification, #vineyard {
+				display:block;
+			}
+		}
+		.base {
+			height:150px;
+		}
+	}
+
+	.articles-grid {		
+		div {
+			position:relative;
+		}		
+		.articles, .blogs_videos, .gazette {
+			background-color:rgba(234,234,234,1);
+			margin-bottom:15px;
+		}		
+		.content {
+			z-index:2;
+			padding:10px;
+		  	color:@inverseColor;
+		}
+		.base {
+			height:100%;
+		}		
+		.left-col {
+			.articles {
+				height:275px;
+			}
+		}
+		.right-col {
+			> div:nth-child(1) {
+				height:190px;
+			}
+			> div:nth-child(2) { 
+				height:360px;
+			}
+			> div:nth-child(3) {
+				height:190px;
+			}
+		}
+		.double-block {
+			> div {
+				height:233px;
+			}
+		}
+		.tall-block {
+			> div {
+				height:480px;
+				.content {
+					position:absolute;
+					bottom:20px;
+				}
+			}
+		}
+      .section-head {
+        color: @inverseColor;
+      }
+      .titular {
+        color: @inverseColor2;
+      }
+	}	
+
+	.features {
+		background-color:rgba(245,245,245,1);
+	}
+	
+	.newsletter {
+		background-color:rgba(136,136,136,1);
+      color:@inverseColor;
+	}    
+
+    @media (max-width: @largeDesktopWidth) {
+        .column > .icon-wrapper {
+            font-size: 1.5em;
+        }
+    }
+
+    @media (max-width: @mediumDesktopWidth) {
+        .column > .icon-wrapper {
+            font-size: 1em;
+        }
+    }
+
+    @media (max-width: @tabletWidth) {
+        .features.grid .headline {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "orion-cli": {
+        "profile": "default",
+        "config": "private/orion-config.json"
+    },
+    "MONGO_URL" : "mongodb://twa:sm3llandspit@candidate.19.mongolayer.com:11146,candidate.4.mongolayer.com:10690/RPOnline?replicaSet=set-55a4e4ce133c7b61870004e7",
+    "MONGO_URL_live" : "mongodb://twa:sm3llandspit@candidate.19.mongolayer.com:11146,candidate.4.mongolayer.com:10690/RPOnline?replicaSet=set-55a4e4ce133c7b61870004e7"
+}
