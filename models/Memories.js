@@ -1,14 +1,12 @@
 Schemas = {};
 Meteor.isClient && Template.registerHelper("Schemas", Schemas);
 
-Schemas.memory = new SimpleSchema({
+Schemas.memories = new SimpleSchema({
+
     user: {
-      type: Object,
-      optional:true
-    },
-    'user._id': {
-        type:String,
-        optional:true
+      type: String,
+      label: "User Id",
+      optional: true,
     },
     name: {
         type:String,
@@ -46,12 +44,11 @@ Schemas.memory = new SimpleSchema({
         optional:true
     },
     status: {
-        type:[String],
+        type:String,
         optional:true
     },
     created_at:{
         type:Date,
-        denyUpdate:true
     },
     updated_at: {
         type: Date,
@@ -65,9 +62,10 @@ Schemas.memory = new SimpleSchema({
 Collections = {};
 Meteor.isClient && Template.registerHelper("Collections", Collections);
 Memories = Collections.Memories = new Mongo.Collection("memories");
-Memories.attachSchema(Schemas.memory);
+Memories.attachSchema(Schemas.memories);
+
 if (Meteor.isServer) {
-    Media.allow({
+    Memories.allow({
         insert:function() {
             return true;
         },

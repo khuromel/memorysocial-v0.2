@@ -3,7 +3,28 @@
     <section>
       <h2 class="page-header">{{PageName}}</h2>
       <hr>
+      <div class="well">
+          {{> inputAutocomplete settings=settings id="search_user" class="form-control" name="search_user" placeholder="Search User..." }}
+      </div>
+      <div class="form-group">
+        <input type="file" class="file_bag form-control" placeholder="Browse File">
+        <button class="upload btn btn-default">Upload</button>
+      </div>
+
+      {{#each files}}
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" aria-valuenow="{{percent_uploaded}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percent_uploaded}}%;">
+            {{percent_uploaded}}%
+          </div>
+        </div>
+      {{/each}}
+
       {{> quickForm collection="Memories" id="add_memory" type="insert"}}
     </section>
   </div>
+</template>
+
+
+<template name="userDetails">
+     {{username}} | <em>(<span style="color: {{color}}; background-color: {{bg}};">{{_id}}</span>)</em>
 </template>

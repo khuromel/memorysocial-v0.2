@@ -2,11 +2,14 @@
   <div class="container-nresponsive">
     <section>
       <h2 class="page-header">Edit memory</h2>
+        {{#each memory.media}}
+          <span><img src="{{url}}" height="200px"></span>
+        {{/each}}
       <div class="form-group">
         <input type="file" class="file_bag form-control" placeholder="Browse File">
         <button class="upload btn btn-default">Upload</button>
       </div>
-
+      {{#if files}}
       {{#each files}}
         <div class="progress">
           <div class="progress-bar" role="progressbar" aria-valuenow="{{percent_uploaded}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percent_uploaded}}%;">
@@ -14,7 +17,7 @@
           </div>
         </div>
       {{/each}}
-
+      {{/if}}
       <!-- {{> dropzone url='#' id='dropzoneDiv'}} -->
 
       {{> quickForm collection="Memories" doc=this id="update_memory" type="update"}}

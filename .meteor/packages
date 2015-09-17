@@ -16,7 +16,6 @@ audit-argument-checks
 fastclick
 zimme:iron-router-active
 manuelschoebel:ms-seo
-browser-policy
 useraccounts:semantic-ui
 natestrauser:animate-css
 dburles:collection-helpers
@@ -30,3 +29,5 @@ mpowaga:autoform-summernote
 fortawesome:fontawesome
 dbarrett:dropzonejs
 reactive-var
+mizzao:autocomplete
+lepozepo:s3

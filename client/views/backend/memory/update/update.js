@@ -5,7 +5,7 @@ Template.update_memory.events({
         var memory_id = String(this._id);
         S3.upload({
                 files:files_bag,
-                path:"Memories"
+                path:"memories"
             },function(error,result){
               console.log(result);
               console.log(memory_id)
@@ -24,7 +24,12 @@ Template.update_memory.events({
 Template.update_memory.helpers({
   "files": function(){
         return S3.collection.find();
-    }
+    },
+  "memory":function(){
+    var memory =  Memories.findOne({_id: this._id});
+    console.log(memory)
+    return memory;
+  }
 })
 
 AutoForm.hooks({

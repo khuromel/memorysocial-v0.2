@@ -2,10 +2,8 @@ var AdminTemplate = 'AdminLayout';
 
 Router.route('admin', {
     subscriptions:function() {
-        return [
-            Meteor.subscribe("Publications"),
-            Meteor.subscribe("Issues"),
-            Meteor.subscribe("Articles"),
+        return [,
+            Meteor.subscribe("Memories"),
             Meteor.subscribe("Media"),
         ]
     },
