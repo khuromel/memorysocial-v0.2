@@ -5,6 +5,7 @@ Router.route('admin', {
         return [,
             Meteor.subscribe("Memories"),
             Meteor.subscribe("Media"),
+            Meteor.subscribe("userData")
         ]
     },
     name:'admin',

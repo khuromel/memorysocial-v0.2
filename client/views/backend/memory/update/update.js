@@ -21,6 +21,12 @@ Template.update_memory.events({
     },
 })
 
+Template.update_memory.rendered = function() {
+    if(!this._rendered) {
+      this._rendered = true;
+    }
+}
+
 Template.update_memory.helpers({
   "files": function(){
         return S3.collection.find();
