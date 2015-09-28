@@ -5,13 +5,17 @@
       <h2 class="page-header">Edit memory</h2>
 
 
-      <div id="links">
-          {{#each memory.media}}
-            <a href="{{url}}" title="" class="screenshot">
-                <img src="{{url}}" alt="" width="150px" class="img-circle thumbnail">
-                 <span class="screenshot-zoom"></span>
-            </a>
-          {{/each}}
+        {{#each photos}}
+          {{id}}
+        {{/each}}
+      <div class="owl-carousel">
+        {{#each memory.media}}
+        <div>
+          <a href="{{url}}" title=""  class="fancybox" rel="gallery" >
+            <img src="{{url}}" alt="" width="150px">
+          </a>
+        </div>
+        {{/each}}
       </div>
 
       <div class="form-group">
@@ -20,11 +24,11 @@
       </div>
       {{#if files}}
       {{#each files}}
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" aria-valuenow="{{percent_uploaded}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percent_uploaded}}%;">
-            {{percent_uploaded}}%
-          </div>
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="{{percent_uploaded}}" aria-valuemin="0" aria-valuemax="100" style="width: {{percent_uploaded}}%;">
+          {{percent_uploaded}}%
         </div>
+      </div>
       {{/each}}
       {{/if}}
       <!-- {{> dropzone url='#' id='dropzoneDiv'}} -->

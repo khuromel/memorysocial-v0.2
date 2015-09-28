@@ -18,5 +18,5 @@ Template['users'].events({
     {
         e.preventDefault();
     }
-  }
+  },
 });

@@ -12,9 +12,9 @@ Template['adminheader'].helpers({
         ]
     },
     'user_info':function(){
-      var user = Meteor.users.findOne({});
-      //  console.log(user)
-      return user;
+      var userId = Meteor.userId();
+      var user_info = Meteor.users.findOne({_id: userId}, {fields: {emails: 1, profile: 1, services: 1}});
+      return user_info;
     }
 
 });

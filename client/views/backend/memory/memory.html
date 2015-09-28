@@ -8,24 +8,30 @@
         <table class="table table-bordered">
           <thead>
             <tr>
-              <th>UserID</th>
+              <th></th>
               <th>Name</th>
-              <th>Description</th>
+              <th>User Id</th>
+              <th>Post Id</th>
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>
             {{#each memory_list}}
-              <tr>
-                <td><a href="{{pathFor 'memory.show'}}">{{user}}</a></td>
-                  <td>{{name}}</td>
-                <td>{{description}}</td>
-                <td>
-                    <a class="btn btn-default delete" role="button">
-                      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-                    </a>
-                </td>
-              </tr>
+            <tr>
+              <td>
+                <a href="{{image_large}}" title=""  class="fancybox" rel="gallery" >
+                  <img src="{{image_thumbnail}}" alt="" width="150px">
+                </a>
+              </td>
+              <td>{{name}}</td>
+              <td>{{user}}</td>
+              <td><a href="{{pathFor 'memory.show'}}">{{post_id}}</a></td>
+              <td>
+                <a class="btn btn-default delete" role="button">
+                  <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                </a>
+              </td>
+            </tr>
             {{/each}}
           </tbody>
         </table>

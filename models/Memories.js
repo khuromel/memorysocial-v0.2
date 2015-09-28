@@ -12,30 +12,38 @@ Schemas.memories = new SimpleSchema({
         type:String,
         optional:true
     },
-    description: {
+    post_id: {
         type:String,
         optional:true
-    },
-    media: {
+    },    
+    image_thumbnail: {
+        type:String,
+        optional:true
+    },         
+    image_large: {
+        type:String,
+        optional:true
+    }, 
+    images: {
         type: Array,
-        label: "Media",
+        label: "Image",
         optional: true,
         minCount: 0,
         maxCount: 20
     },
-    'media.$': {
+    'images.$': {
         type: Object,
         optional: true,
     },
-    'media.$._id': {
+    'images.$.height': {
         type: String,
         optional: true,
     },
-    'media.$.type': {
+    'images.$.width': {
         type: String,
         optional: true,
     },
-    'media.$.url': {
+    'images.$.source': {
         type: String,
         optional: true,
     },

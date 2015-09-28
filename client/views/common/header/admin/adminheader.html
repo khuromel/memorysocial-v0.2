@@ -16,8 +16,10 @@
                 </div>
                 <div class="col-xs-2">
                     <div class="header-tools">
-                      <img src="http://graph.facebook.com/{{user_info.services.facebook.id}}/picture/?type=small" alt="{{user_info.services.facebook.name}}">
+                    {{# if user_info}}
+                      <img src="https://graph.facebook.com/me/picture/?type=small&access_token={{user_info.services.facebook.accessToken}}" alt="{{user_info.services.facebook.name}}">
                       {{user_info.services.facebook.name}}
+                    {{/if}}
                       {{> loginButtons}}
                     </div>
                 </div>

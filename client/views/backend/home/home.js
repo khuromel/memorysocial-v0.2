@@ -12,10 +12,14 @@ Template['admin'].helpers({
 		return Memories.find({}).count();
 	},
 	connection_count:function(){
-		return Connections.find({}).count();
+		//Connections.find({}).count();
+		return null;
 	},
 });
 
 Template['admin'].events({
 
+  "click #getMemory":function(){
+    Meteor.call('getFacebookImages');
+  }
 });
